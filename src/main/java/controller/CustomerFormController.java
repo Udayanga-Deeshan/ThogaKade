@@ -5,6 +5,9 @@ import javafx.fxml.FXML;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
+import service.BOFactory;
+import service.SuperService;
+import util.BOType;
 
 public class CustomerFormController {
 
@@ -35,8 +38,17 @@ public class CustomerFormController {
     @FXML
     private TextField txtSalary;
 
+     SuperService service= BOFactory.getInstance().getBOType(BOType.CUSTOMER);
+
     @FXML
     void btnAddCustomerAction(ActionEvent event) {
+        String id = txtID.getText();
+        String name = txtName.getText();
+        String address = txtAddress.getText();
+        Double salary = Double.parseDouble(txtSalary.getText());
+
+
+
 
     }
 
