@@ -1,5 +1,6 @@
 package controller;
 
+import dto.Customer;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.TableColumn;
@@ -7,6 +8,7 @@ import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
 import service.BOFactory;
 import service.SuperService;
+import service.custom.CustomerBO;
 import util.BOType;
 
 public class CustomerFormController {
@@ -38,7 +40,7 @@ public class CustomerFormController {
     @FXML
     private TextField txtSalary;
 
-     SuperService service= BOFactory.getInstance().getBOType(BOType.CUSTOMER);
+     CustomerBO service= BOFactory.getInstance().getBOType(BOType.CUSTOMER);
 
     @FXML
     void btnAddCustomerAction(ActionEvent event) {
@@ -47,7 +49,8 @@ public class CustomerFormController {
         String address = txtAddress.getText();
         Double salary = Double.parseDouble(txtSalary.getText());
 
-
+        Customer customer = new Customer(id, name, address, salary);
+        service.addCustomer(customer);
 
 
     }

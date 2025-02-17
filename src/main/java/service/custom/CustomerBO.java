@@ -1,12 +1,13 @@
 package service.custom;
 
+import dto.Customer;
 import service.SuperService;
 
 public interface CustomerBO extends SuperService {
 
-    boolean addCustomer();
+    boolean addCustomer(Customer customer);
 
-    boolean updateCustomer();
+    boolean updateCustomer(Customer customer);
 
 
 }
