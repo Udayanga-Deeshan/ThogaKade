@@ -10,6 +10,7 @@ public class CustomerDaoImpl implements CustomerDao {
 
     @Override
     public boolean save(CustomerEntity entity) {
+        System.out.println("Repository: "+entity);
         return false;
     }
 

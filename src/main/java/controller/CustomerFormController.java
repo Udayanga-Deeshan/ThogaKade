@@ -1,5 +1,6 @@
 package controller;
 
+import com.google.inject.Inject;
 import dto.Customer;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -39,8 +40,8 @@ public class CustomerFormController {
 
     @FXML
     private TextField txtSalary;
-
-     CustomerBO service= BOFactory.getInstance().getBOType(BOType.CUSTOMER);
+     @Inject
+     CustomerBO service;
 
     @FXML
     void btnAddCustomerAction(ActionEvent event) {

@@ -2,7 +2,7 @@ package repository;
 
 import java.util.List;
 
-public interface CrudReposiory<T,ID>{
+public interface CrudReposiory<T,ID> extends  SuperDao{
 
     boolean save(T entity);
 
