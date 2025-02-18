@@ -1,7 +1,8 @@
 package repository.custom;
 
-import dto.Customer;
+
+import entity.CustomerEntity;
 import repository.CrudReposiory;
 
-public interface CustomerDao  extends CrudReposiory<Customer,String> {
+public interface CustomerDao  extends CrudReposiory<CustomerEntity,String> {
 }

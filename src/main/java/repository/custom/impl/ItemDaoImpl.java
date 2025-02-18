@@ -1,19 +1,21 @@
 package repository.custom.impl;
 
 import dto.Item;
+import entity.ItemEntity;
 import repository.CrudReposiory;
 import repository.custom.ItemDao;
 
 import java.util.List;
 
 public class ItemDaoImpl   implements ItemDao {
+
     @Override
-    public boolean save(Item entity) {
+    public boolean save(ItemEntity entity) {
         return false;
     }
 
     @Override
-    public boolean update(Item entity) {
+    public boolean update(ItemEntity entity) {
         return false;
     }
 
@@ -23,12 +25,12 @@ public class ItemDaoImpl   implements ItemDao {
     }
 
     @Override
-    public Item search(String s) {
+    public ItemEntity search(String s) {
         return null;
     }
 
     @Override
-    public List<Item> getAll() {
+    public List<ItemEntity> getAll() {
         return List.of();
     }
 }

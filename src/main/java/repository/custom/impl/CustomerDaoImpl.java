@@ -1,18 +1,20 @@
 package repository.custom.impl;
 
 import dto.Customer;
+import entity.CustomerEntity;
 import repository.custom.CustomerDao;
 
 import java.util.List;
 
 public class CustomerDaoImpl implements CustomerDao {
+
     @Override
-    public boolean save(Customer entity) {
+    public boolean save(CustomerEntity entity) {
         return false;
     }
 
     @Override
-    public boolean update(Customer entity) {
+    public boolean update(CustomerEntity entity) {
         return false;
     }
 
@@ -22,12 +24,12 @@ public class CustomerDaoImpl implements CustomerDao {
     }
 
     @Override
-    public Customer search(String s) {
+    public CustomerEntity search(String s) {
         return null;
     }
 
     @Override
-    public List<Customer> getAll() {
+    public List<CustomerEntity> getAll() {
         return List.of();
     }
 }
